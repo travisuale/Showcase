@@ -7,6 +7,10 @@ type HeaderProps = {
   titleTop?: string;
   titleBottom?: string;
   featuredTeams?: string[];
+  facts?: Array<{
+    label: string;
+    value: string;
+  }>;
 };
 
 const directTeamLogos: Record<string, string> = {
@@ -20,7 +24,7 @@ const directTeamLogos: Record<string, string> = {
 
 const directTeamLogoSize: Record<string, string> = {
   Timpview: "h-[86%] w-[86%]",
-  "Lone Peak": "h-[88%] w-[88%]",
+  "Lone Peak": "h-[84%] w-[84%]",
   Springville: "h-[98%] w-[98%]",
   Skyline: "h-[98%] w-[98%]",
   Westlake: "h-[96%] w-[96%]",
@@ -67,6 +71,7 @@ export function Header({
   titleTop,
   titleBottom,
   featuredTeams,
+  facts,
 }: HeaderProps) {
   return (
     <section className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-surface px-6 py-8 text-white shadow-[0_28px_100px_rgba(0,0,0,0.34)] sm:px-10 sm:py-12">
@@ -82,9 +87,6 @@ export function Header({
           >
             Showcase Home
           </Link>
-          <p className="rounded-full border border-primary/30 bg-primary/12 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-primary-dark">
-            {audience}
-          </p>
         </div>
         <div className="mt-8">
           <div>
@@ -145,6 +147,20 @@ export function Header({
             <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-100/86 sm:text-base">
               {description}
             </p>
+            {facts?.length ? (
+              <section className="mt-6 rounded-[2rem] border border-white/10 bg-slate-950/85 px-5 py-5 text-slate-100 shadow-[0_18px_50px_rgba(0,0,0,0.18)] sm:px-6 sm:py-6">
+                <dl className="grid gap-6 md:grid-cols-3">
+                  {facts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt className="text-sm font-bold uppercase tracking-[0.18em] text-primary-dark">
+                        {fact.label}
+                      </dt>
+                      <dd className="mt-2 text-lg leading-8 sm:text-2xl">{fact.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            ) : null}
           </div>
         </div>
       </div>

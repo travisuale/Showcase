@@ -18,19 +18,19 @@ export function FieldLayoutSection({
       name: "Position Groups",
       shortTitle: "Position Groups",
       items: fieldLayouts.positionGroups,
-      visual: "/session-1.png",
+      visual: "/field-layouts/repo-session-1.png?v=1",
     },
     {
       name: "1v1 (Skills) + 3v3 (Combo/Bigs)",
       shortTitle: "1v1 + 3v3",
       items: fieldLayouts.skillGroups,
-      visual: "/session-2.png",
+      visual: "/field-layouts/repo-session-2.png?v=1",
     },
     {
       name: "7v7 (Skills/Combo) + 1v1 (Bigs)",
       shortTitle: "7v7 + 1v1",
       items: fieldLayouts.bigs,
-      visual: "/session-3.png",
+      visual: "/field-layouts/repo-session-3.png?v=1",
     },
   ];
 
@@ -68,11 +68,11 @@ export function FieldLayoutSection({
               </div>
             </div>
             {useSessionVisuals ? (
-              <div className="mt-4 overflow-hidden rounded-2xl border border-white/8 bg-black/12 p-3">
+              <div className="mt-4 overflow-hidden rounded-2xl border border-white/8 bg-[#05080f] p-3">
                 <img
                   src={section.visual}
                   alt={`${section.shortTitle} visual`}
-                  className="h-auto w-full rounded-xl"
+                  className="block h-auto w-full rounded-xl"
                 />
               </div>
             ) : (

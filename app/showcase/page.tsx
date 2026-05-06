@@ -16,30 +16,12 @@ export default function ShowcasePage() {
         titleBottom="High School Football"
         description={event.description}
         featuredTeams={teams}
+        facts={[
+          { label: "Date", value: event.date },
+          { label: "Time", value: event.time },
+          { label: "Location", value: event.location },
+        ]}
       />
-
-      <section className="rounded-[2rem] border border-white/10 bg-slate-950 px-5 py-5 text-slate-100 shadow-[0_18px_50px_rgba(0,0,0,0.18)] sm:px-6 sm:py-6">
-        <dl className="grid gap-6 md:grid-cols-3">
-          <div>
-            <dt className="text-sm font-bold uppercase tracking-[0.18em] text-primary-dark">
-              Date
-            </dt>
-            <dd className="mt-2 text-lg leading-8 sm:text-2xl">{event.date}</dd>
-          </div>
-          <div>
-            <dt className="text-sm font-bold uppercase tracking-[0.18em] text-primary-dark">
-              Time
-            </dt>
-            <dd className="mt-2 text-lg leading-8 sm:text-2xl">{event.time}</dd>
-          </div>
-          <div>
-            <dt className="text-sm font-bold uppercase tracking-[0.18em] text-primary-dark">
-              Location
-            </dt>
-            <dd className="mt-2 text-lg leading-8 sm:text-2xl">{event.location}</dd>
-          </div>
-        </dl>
-      </section>
 
       <FullBleedBand variant="dark">
         <ScheduleSection
