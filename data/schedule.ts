@@ -11,19 +11,24 @@ export type RotationGroup = {
 
 export const simpleSchedule: ScheduleBlock[] = [
   {
+    time: "12:00 PM",
+    title: "Coaches Check-In",
+    details: "",
+  },
+  {
     time: "1:00 PM",
     title: "Warmup",
     details: "Everyone together.",
   },
   {
     time: "1:10 PM",
-    title: "INDYS",
+    title: "Indys",
     details: "Position Drills.",
   },
   {
     time: "1:30 PM",
     title: "Group Periods",
-    details: "1v1 (Skills) + 3v3 (Combo/Bigs).",
+    details: "1v1 (Skills/Combo) + 3v3 (Bigs).",
   },
   {
     time: "2:05 PM",

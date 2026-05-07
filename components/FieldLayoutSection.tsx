@@ -21,7 +21,7 @@ export function FieldLayoutSection({
       visual: "/field-layouts/repo-session-1.png?v=1",
     },
     {
-      name: "1v1 (Skills) + 3v3 (Combo/Bigs)",
+      name: "1v1 (Skills/Combo) + 3v3 (Bigs)",
       shortTitle: "1v1 + 3v3",
       items: fieldLayouts.skillGroups,
       visual: "/field-layouts/repo-session-2.png?v=1",
